@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+
+        functions
+        block of reusable code that is used to perform some task
+        when something invokes it
+
+
+        function declaration
+         function name(parameters){
+         //block of code
+         }
+         
+        function calling or invoking
+        functionname(arguments)- js
+        html= button onclick="functionname()"
+
+        points to be noted
+        function name stores func declaration
+        function calling execute block of code
+        logging the function calling prints the return value
+        statements after return will not execute
+        named functions can only be hoisted
+        in js functions are first class functions means
+            we can assign function as values to an variable
+
+
+            anonymous function
+            is a function that is defined without a name
+
+
+            arrow function
+            it is a more concise way of writing a function
+            in simple way
+
+            callback function is
+            when a function definition is passed to
+            another funcion as an argument and later on
+            executes in the main function 
+
+            higher order function
+
+
+
+        
+            */
+          
+            // anonymous function
+        //    var a=function (a,b){
+        //        return a+b
+        //     };
+
+
+
+        //     console.log(a(2,3)+10)
+
+
+        
+            
+
+        //arrow function
+        // {}, (), return , function keyword
+//    var a=(a,b)=>{
+// return a+b
+// }
+        // var a=a=>a-b
+
+        // iife- (immediate invoking function expression)
+        // self invoking function
+        // (function declartion)(calling)
+
+        // ( ()=>console.log("hello world"))()
+
+
+
+        function first(callback){
+            console.log("first")
+            callback(third)
+        }
+    
+        function second(callback){
+            console.log("second")
+            callback()
+        }
+
+        function third(){
+            console.log("third")
+        }
+
+        first(second)
+
+        higherorderfunction(sum,sub,mul)
+        // 1) products added to the cart
+        // 2) payment completed
+        // 3) order placed
+
+
+        function products(a){
+            console.log("products added to the cart")
+            a(order)
+        }
+
+        function payment(b){
+            console.log("payment completed")
+            b()
+        }
+
+        function order(){
+            console.log("order placed")
+        }
+    
+     products(payment )
+      
+
+
+
+
+
+       
+        
+        
+
+        
+
+
+
+
+
+
+
+    
+
+    
+    </script>
+    
+</body>
+</html>
