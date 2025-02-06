@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <header id="el1">
+
+    </header>
+
+    <script>
+        /*
+
+        dom - document object model
+
+        dom is used to manipulate the content , strutcutre
+        and stylings in a document 
+        it represents every element as a object
+        it is used dynamically access and update the content
+
+        dom has methods for accesssing and properties for manipulating
+        
+
+        methods for accessing
+        how to access element
+        1) document.getElementsByTagName("h1")
+          it comes in collections
+        2) document.getElementsByClassName("child")
+          it comes in collections and can be accesed through indexing
+        3) document.getElementById("el1")
+          id is unique 
+         4) document.querySelector("")
+           it selects the first element 
+           it can select by tagname , .classname, #id
+        5) document.querySelectorAll("")
+           it comes in collections
+           it can select by tagname , .classname, #id
+
+           how to access content
+
+           document.getElementById("el1").innerText
+           document.getElementById("el1").innerHTML
+           document.getElementById("el1").textContent
+                              method.property
+
+
+          how to modify content
+          
+        let b=document.getElementsByClassName("child")
+        b[0].innerText="new content"
+        b[0].innerHTML="new content"
+        b[0].textContent="new content"
+
+        how to apply styling
+        document.getElementById("el1").style.propname="value"
+                                method.property
+
+        how to create an element
+        */ 
+
+        // let el=document.getElementsByClassName("child");
+        // let content=["html", "Css", "js", "bootstrap", "mongo","sql", "java","python"]
+   
+
+        // for(i=0;i<el.length;i++){
+        //     console.log(el[i])
+        //     el[i].innerText=content[i]
+        // }
+
+        // count=0
+
+        // function colorchange(){
+            
+        //          colors=["red", "green", "blue", "violet","yellow"]
+        //            let a=document.getElementsByTagName("body")[0]
+        //            a.style.backgroundColor=colors[count]
+        //            console.log(a);
+        //            count++
+
+        //            if(count==colors.length){
+        //             count=0;
+        //            }
+
+        // }
+        
+       let main=document.getElementById("el1");
+       
+       let header=document.createElement("h1");
+        header.innerText="10k coders";
+        header.style.color="blue";
+        
+
+        let para=document.createElement("p");
+        para.innerText="loremhjkf;dsf sfd"
+        para.style.background="blue"
+        para.style.color="white"
+        
+       main.append(header)
+       main.append(para)
+
+        console.log(main)
+        console.log(header)
+        console.log(para)
+        
+
+
+        
+      
+    
+        
+      
+    </script>
+</body>
+</html>
