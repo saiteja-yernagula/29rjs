@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: auto auto auto;
+        }
+
+        img{
+            width: 100px;
+        }
+        
+    </style>
+</head>
+<body>
+
+  
+    <script>
+
+/*
+
+dom - document object model
+used to manipulate the content , structre and styling
+dom connects scripts to the webpages
+dom have methods and properties to interact with the webpages
+
+
+dom - 
+element level object creation
+field name 
+
+how to access an elements
+1) getElementsByTagName("")
+2) getElementsByClassName("")
+2) getElementById("id")
+4) querySelector("")
+5) querySelectorAll("")
+
+how to access content
+  element.innerText
+  element.textContent
+  element.innerHTML
+
+  how to apply styling
+  element.style.color="red"
+
+
+  how to modfiy content
+  element.innerHTML = "<b>new content</b>"
+  element.innerText = "new content"
+
+
+  how to create an element
+  var a=document.createElement("div")
+ 
+  
+
+  how to append
+  document.body.appendChild(a)
+  header.appendChild(a)
+
+
+
+  how to get an attribute
+  element.getAttribute("")
+
+
+  how to set an attribute
+
+
+
+
+*/ 
+
+
+    //  var a=document.createElement("img");
+    //  a.setAttribute('src','https://motionbgs.com/i/c/364x205/media/7022/itachi-neon.jpg.webp');
+    // //  a.style.border="3px solid red"
+    // //  a.style.boxShadow="1px 1px 3px 3px blue "
+    // //  a.style.padding="40px"
+    // //  a.style.margin="40px"
+
+    // a.setAttribute("class", "child ")
+    // a.setAttribute("class", "child2")
+    
+    
+
+
+    //  document.body.appendChild(a)
+
+
+
+
+    //  a.src="https://motionbgs.com/i/c/364x205/media/7022/itachi-neon.jpg.webp"
+    // //  a.setAttribute("src","https://motionbgs.com/i/c/364x205/media/7022/itachi-neon.jpg.webp")
+
+    //  console.log(a);
+
+
+
+     var container=document.createElement("div");
+    
+
+
+     var imagesources=[
+        "https://wallpapersmug.com/large/bd1f8f/goku-anime-art-glowing-eyes.jpg",
+        "https://wallpapersmug.com/large/bd1f8f/goku-anime-art-glowing-eyes.jpg",
+        "https://motionbgs.com/i/c/364x205/media/7022/itachi-neon.jpg.webp",
+        "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/0ac38adc-f48d-4177-b61d-01e4905b539f/dh113sn-24845383-1e82-4fff-bfa0-a9798b73eebd.jpg/v1/fill/w_1280,h_718,q_75,strp/dragon_ball___anime_wallpaper_4k_by_vowebox_dh113sn-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzE4IiwicGF0aCI6IlwvZlwvMGFjMzhhZGMtZjQ4ZC00MTc3LWI2MWQtMDFlNDkwNWI1MzlmXC9kaDExM3NuLTI0ODQ1MzgzLTFlODItNGZmZi1iZmEwLWE5Nzk4YjczZWViZC5qcGciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.njwO4Ht2utORaMyUUxytST6uHoN-49DSXBt7aGBNZJ8",
+        "https://wallpapersmug.com/large/bd1f8f/goku-anime-art-glowing-eyes.jpg",
+        "https://motionbgs.com/i/c/364x205/media/7022/itachi-neon.jpg.webp",
+        "https://motionbgs.com/i/c/364x205/media/7022/itachi-neon.jpg.webp",
+        
+     ]
+
+     let content=[
+        "box1",
+        "box2",
+        "box3",
+        "box4",
+        "box5",
+        "box6",
+     ]
+
+
+     for(i=1;i<=imagesources.length;i++){
+
+        var child=document.createElement("div");
+        child.style.padding="10px";
+        child.style.backgroundImage=`url(${imagesources[i-1]})`;
+
+        
+        child.style.width="100px";
+        child.style.backgroundSize="cover"
+        child.style.backgroundRepeat="no-repeat";
+        child.style.margin='20px'
+        console.log(child)
+    //  var img=document.createElement("img");
+     var p=document.createElement("p")
+
+     p.innerText=content[i-1];
+
+
+    //  img.setAttribute("src", imagesources[i-1])
+    //  console.log(img);
+     
+
+
+    //  child.append(img);
+    //  child.append(p);
+    //  container.append(child)
+
+     
+     
+     
+     
+    }
+    document.body.append(container)
+    container.setAttribute("class", "container")
+
+    console.log(container);
+    
+     
+     
+     
+    </script>
+</body>
+</html>
