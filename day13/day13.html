@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div{
+            background: lightcoral;
+            margin:20px
+        }
+    </style>
+</head>
+<body>
+
+
+    <div id="el1" onclick="change()">click me</div>
+
+    <script>
+        /*
+
+        how to get an attribute
+        how to set an attribue
+
+        how to create cards
+
+        classlist.add()
+        classlist.remove("cls")
+        classlist.toggle("lkj")
+
+
+        fields 
+
+        there are two ways to create objects in dom
+        1) element level objects
+           by id
+           by clas
+           by tag
+        2) document level objects
+            document.body
+            docuement.head
+            document.title
+            document.scripts    
+            document.anchors
+            document.links
+            document.images
+
+
+            types of events
+            mouse event
+            keyboard event
+            form events
+            window events
+
+            event handles
+            functions that are responsible for handling specific task
+
+
+            types of event handles
+            1) inline event handlers
+
+              <div onClick="fun()">click me</div>
+
+
+            2) DOM Event handlers- event handlers in script tag 
+
+            element=document.getElementByID("kldjf")
+            element.addEventListener("typeofevent", function)
+        */ 
+
+        function change(){
+            document.getElementById("el1").style.color = "red";
+        }
+
+
+
+
+        var newdiv=document.createElement("button");
+        newdiv.innerText="submit";
+
+        newdiv.addEventListener("click", function(){
+            newdiv.style.color="green"
+        })
+
+        newdiv.addEventListener("mousemove", function(){
+            newdiv.style.color="yellow"
+        })
+
+        document.body.append(newdiv);
+
+        console.log(newdiv);
+
+        count=true;
+
+        document.body.addEventListener("keypress",function(event){
+            console.log(event.key)
+
+            if(count){
+                if(event.key=="Enter"){
+
+document.body.style.background="yellow"
+count=false;
+}
+
+            }
+            else{
+                document.body.style.background="white";
+                count=true
+            }
+        
+     
+           
+        })
+        
+    </script>
+    
+</body>
+</html>

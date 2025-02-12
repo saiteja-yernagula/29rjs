@@ -4,8 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .child{
+            background-color: lightcoral;
+            color:white
+        }
+
+        .child2{
+            font-size: 40px;
+        }
+
+        .remove{
+            display: none;
+        }
+    </style>
 </head>
 <body>
+
+    <button onclick="hide()">clikc</button>
+
+
+    <script>
+        /*
+
+
+        
+        
+        */ 
+
+        var element=document.createElement("div");
+        element.innerText="hello world";
+
+        
+        document.body.appendChild(element);
+
+
+        // count=true;
+        function hide(){
+            var div=document.querySelector("div");
+
+            div.classList.toggle("remove")
+            // if(count){
+            //     div.classList.add("remove")
+            //     count=false
+
+            // }
+            // else{
+            //     div.classList.remove("remove");
+            //     count=true;
+            // }
+            
+        }
+
+
+
+
+    </script>
     
 </body>
 </html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<!-- 
+  <form action="">
+    <label for="">username</label>
+    <input type="text" >
+
+    <button >click me</button>
+
+
+  </form>
+
+  <div class="el1"></div> -->
+
+
+  <form action="">
+
+  <input type="text"><br>
+  <input type="text"><br>
+  <div></div>
+  <button >submit</button>
+  </form>
+  <script>
+
+    document.forms[0].addEventListener("submit",function (e){
+      e.preventDefault();
+      a=document.forms[0]
+      console.log(a[0].value,a[1].value);
+      maindiv=document.querySelector("div")
+      if(a[0].value==a[1].value){
+        maindiv.innerText="password mathced"
+        console.log("password mathced")
+      }
+      else{
+        maindiv.innerText="password not mathced"
+
+        console.log("password not matched")
+      }
+      
+      
+    })
+    /*
+
+    field level objects
+    events 
+
+    types of events
+    mouse events
+    keyboard events
+    form events
+    window events
+
+    event handles : functions 
+    inline event
+    dom event
+    handlers
+
+       element.addEventListener("type of event", hello())
+
+       funciton hello(){
+       log("hellow")
+       }
+
+       forms and inputs
+
+       how many way we can access forms and inputs
+       1) 
+
+
+
+
+
+    
+    
+    */ 
+
+
+    // document.forms[0].addEventListener("submit", function (e){
+    //   e.preventDefault()
+    //   var inp=document.forms[0][0].value;
+    //   console.log(inp);
+    //   var maindiv=document.querySelector("div")
+    //   if(inp.length<=5){
+    //     maindiv.innerText="password is too weak";
+    //     maindiv.style.color="red"
+    //     console.log("password is too weak")
+    //   }
+    //   else if(inp.length<=8){
+    //     console.log("password is medium")
+    //     maindiv.innerText="password is medium";
+    //     maindiv.style.color="orange"
+
+    //   }
+    //   else{
+    //     console.log("password is strong")
+
+    //     maindiv.innerText="password is strong";
+    //     maindiv.style.color="green"
+    //   }
+    // })
+
+
+    // var form=document.querySelector("form");
+    // form.addEventListener("submit", function (e){
+
+    //   e.preventDefault();
+    //   var inp=document.querySelector("input")
+
+    //   if(inp.value==""){
+    //     alert("please enter the value in a field");
+    //   }
+    //   else{
+    //   console.log(inp.value);
+
+    //   var child=document.createElement("div")
+    //   child.innerText=inp.value;
+    //   console.log(child)
+
+    //   var button=document.createElement("button");
+    //   button.innerText="*";
+    //   button.addEventListener("click",function(){
+    //     child.remove();
+    //   })
+    //   console.log(button)
+    //   child.append(button)
+
+    //   var maindiv=document.querySelector("div")
+    //   maindiv.append(child)
+
+    //   inp.value=""
+      
+
+    //   }
+      
+
+
+
+      // var inp=document.forms[0][0]
+      // console.log(inp.value)
+
+      // var inp=e.target;
+      // console.log(e.target[0].value)
+
+    // })
+
+
+    // var a="hallo"
+    // var b="hello"
+    // console.log(a==b);
+
+    /*
+    color generator
+    counter
+    to do list
+    calculator
+    otp generator
+    digital clock 
+    age calculator
+    how to create cards
+    
+
+
+    
+    
+    */ 
+    
+  </script>
+
+
+
+
+  
+</body>
+</html>
