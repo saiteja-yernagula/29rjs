@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /*
+        array methods
+
+
+        object methods
+
+        Object
+       it is used to store data in key and value pairs
+
+
+       ways to create an object
+
+       1) by using literal notation
+
+        let obj={
+        key: value,
+        a: "john",
+        b:10,
+        c:true
+        }
+        2) by using constructor
+        let obj=new Object();
+
+        how to access an object
+        object values can be accessed by named index
+        1) dot notation
+
+        console.log(obj.name)
+        2) square notation
+         console.log(obj["name"])
+        
+
+         how to modify an object
+
+         obj.name="some new data"
+         obj["name"]="some new data"
+
+         how to add new keys and values
+         obj.newkey="newvalue"
+         obj.newkey="newvalue"
+
+         how to delete
+         delete obj.name
+
+         object methods
+         Object.keys()
+         Object.values()
+         Object.entries()
+         Object.assign()
+         Object.create()
+
+         Object.freeze() - allowed
+                           accesing
+                            
+                           not allowed
+                           modifications
+                           delete
+                           new additions
+         Object.seal()
+                         allowed
+                         accesing
+                         modifications
+
+                         not allowed
+                         delete
+                         new additions
+
+
+        how to iterate
+        for(i in obj){
+        console.log(i)//returns keys
+        console.log(obj[i])//returns values
+        }
+
+        for(i of obj){
+        console.log(i)
+        }//obj is not iterable
+
+        for(i of Object.keys(obj)){
+        console.log(i)//keys
+        console.log(obj[i])//values
+        }
+
+        for (i of Object.values(obj)){
+        console.log(i)//values
+        }
+
+
+          for([i,j] of Object.entries(obj)){
+            console.log(i,j);//i=keys j=values
+        }
+
+        
+
+        
+        
+        */
+
+        let obj={
+            name:"john",
+            age:25
+        }
+
+        for(i in obj){
+            console.log(obj[i]);
+        }
+
+        for([i,j] of Object.entries(obj)){
+            console.log(i,j);
+        }
+
+        // console.log(obj.hasOwnProperty("city"));
+        
+
+
+        // Object.seal(obj)
+        // // how to access
+        // console.log(obj.name) 
+
+        // // how to modify
+        // obj.name="some new data";
+
+
+        //  //how to delet
+        //  delete obj.age
+         
+
+        //  //how to add
+        //  obj.batch="29"
+
+        //  console.log(obj);
+         
+       
+        
+
+
+        
+        
+
+    
+ 
+        
+
+      
+    </script>
+</body>
+</html>
