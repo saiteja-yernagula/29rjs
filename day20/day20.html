@@ -21,6 +21,9 @@
     </style>
 </head>
 <body>
+    <h1>
+        <a href="file.html">file open</a>
+    </h1>
     <script>
 
         /*
@@ -37,6 +40,13 @@
 
 
         */
+
+
+        
+        let name=JSON.parse(localStorage.getItem("data1"))
+        console.log(name);
+        
+        document.body.append(name)
 
         let data=[
   {

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="cards()">open</button>
+    <button onclick="clos()">close</button>
+
+    <a href="day20.html">cards</a>
+    <script>
+        /*
+        Bom - browser object model
+        a set of objects provided by browser to interact 
+        with the browser
+
+        1) window objects
+        window.innerHeight
+        window.innerWidth
+        window.alert("")
+        window.prompt("")
+        window.confirm("are you sure")
+        window.open("")
+        window.close("")
+
+     
+        2)navigator objects
+        navigator.onLine
+        coordinates
+        
+        console.log(navigator.appCodeName);
+        console.log(navigator.appName);
+        console.log(navigator.appVersion);
+        console.log(navigator.cookieEnabled);
+
+        3) location objects
+        
+        console.log(location.href);
+        console.log(location.hostname);
+        console.log(location.pathname);
+        console.log(location.port);
+        console.log(location.protocol);
+
+        4) history objects
+        history.go()
+        history.back()
+        history.forward()
+
+        5) cookie obects
+
+        6) screen objects
+        screen.width
+        screen.availWidth
+        screen.availHeigth
+        console.log(screen.colorDepth);
+        console.log(screen.pixelDepth);
+        screen.height
+        
+
+        localstorage
+        how to sent data
+        localStorage.setItem('data1',"raghu")
+       a= localStorage.getItem('data1')
+
+
+       with objects
+         localStorage.setItem('data1',JSON.stringify(obj))
+        
+
+         let a =JSON.parse(localStorage.getItem("data1"))
+
+        */
+
+        let data=[
+            {name:name.valu,age:age,avalu},
+            {name:"raghu",age:25},
+            {name:"raghu",age:25},
+        ]
+       let obj={
+        name:"raghu",
+        age:25,
+       }
+
+        localStorage.setItem('data1',JSON.stringify(obj))
+        
+        
+
+
+
+        
+
+        // if(navigator.geolocation){
+        //     navigator.geolocation.getCurrentPosition(function(position){
+        //      console.log(position.coords.latitude, position.coords.longitude);
+             
+        //     })
+        // }
+
+        // if(navigator.onLine){
+        //     console.log("user in online")
+        // }else{
+        //     console.log("user is offline")
+        // }
+
+     
+
+    //    function clos(){
+
+    //     if(window.confirm("are u sure"))
+    //        window.close()
+       
+
+    //    }
+
+    //    function cards(){
+    //     window.open("https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg", "_blank","width=300,height=300")
+    //    }
+
+       
+       
+    </script>
+    
+</body>
+</html>
