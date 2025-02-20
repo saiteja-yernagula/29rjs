@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- 
+    
+    browser object model
+    window 
+    navigator
+    screen
+    history
+    cookies
+    location
+
+    storage api
+    session storage
+    local storage
+    
+    -->
+
+    <input type="text" placeholder="ur name">
+    <input type="text" placeholder="ur email">
+    <button onclick="add()">add</button>
+    <a href="new.html">
+        <button>next page</button>
+    </a>
+    <script>
+
+        let arr=[]
+        function add(){
+            var inp1=document.getElementsByTagName("input")[0]
+            var inp2=document.getElementsByTagName("input")[1]
+            
+            
+            let obj={
+                name: inp1.value,
+                email:inp2.value
+            }
+
+            arr.push(obj)
+           console.log(arr)
+
+           localStorage.setItem("details", JSON.stringify(arr))
+
+
+            inp1.value=""
+            inp2.value=""
+        }
+    </script>
+</body>
+</html>

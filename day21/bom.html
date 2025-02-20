@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="fun()">show notifications</button>
+    <ul>
+        <li>some notifications</li>
+        <li>some notifications</li>
+        <li>some notifications</li>
+        <li>some notifications</li>
+    </ul>
+
+    <div></div>
+
+
+    <!-- 
+    timing functions
+    setInterval(callback, timing)
+
+    cleartInterval(a)
+
+    
+    -->
+
+    <script>
+
+// const messages = ["Loading resources...", "Connecting to the server...", "Almost there...", "Done!"];
+// count=0
+// function fun(){
+//     let div=document.querySelector("div")
+//     count++
+//     if(count<messages.length){
+//         div.innerHTML=messages[count] 
+//         let a= setTimeout(() => {
+//             fun()
+//         }, 1000);
+//     }
+// }
+// fun()
+
+
+        // function fun(){
+        //     var ul = document.querySelector('ul');
+        //     ul.style.display="block";
+
+        //     setTimeout(() => {
+        //     ul.style.display="none";
+                
+        //     }, 2000);
+        // }
+
+// count=0
+//      let a= setInterval(()=>{
+//         console.log("Hello World");
+//         console.log("hi ");
+//         count++
+//         if(count>=5){
+//             clearInterval(a)
+
+//         }
+//       },1000)
+
+      
+
+// function fun(){
+//     console.log("hello world")
+//     console.log("hi world")
+// }
+
+
+// setTimeout(() => {
+//     fun()
+    
+// }, 2000);
+
+
+/*
+
+api - application programming interface
+
+
+fetch - used to make an network request to the server(apicall)
+it returns promise
+
+promise resolve 
+then catch
+async await
+
+*/ 
+let a=prompt("enter a  food name")
+
+fetch(`https://api.edamam.com/search?q=${a}&app_id=a52b4d43&app_key=e0e5c667605f5e91d8275c973531b80a`)
+.then((data)=>
+    data.json()
+)
+.then((data)=>
+    console.log(data.hits)
+)
+
+async function executor(){
+    let a=prompt("enter a  food name")
+    let data= await fetch(`https://api.edamam.com/search?q=${a}&app_id=a52b4d43&app_key=e0e5c667605f5e91d8275c973531b80a`)
+ let maindata=await data.json()
+ console.log(maindata.hits[0])
+ console.log(maindata.hits[0].recipe.image)
+   
+}
+executor()
+
+
+
+
+
+
+
+
+       
+
+
+     
+      
+    </script>
+    
+</body>
+</html>

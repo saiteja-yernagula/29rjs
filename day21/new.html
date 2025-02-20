@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body>div{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap:10px;
+        }
+
+        body>div>div{
+            box-shadow: 0px 0px 1px 2px grey;
+        }
+    </style>
+</head>
+<body>
+    <script>
+
+        let data=JSON.parse(localStorage.getItem("details"))
+        console.log(data)
+
+        let maincontainer=document.createElement("div")
+
+        let maindata=data.map((val)=>{
+            let child=document.createElement("div")
+            let childa=document.createElement("div")
+            let childb=document.createElement("div")
+
+            childa.innerText=val.name
+            childb.innerText=val.email
+
+            child.append(childa,childb)
+
+            maincontainer.append(child)
+            console.log(child)
+
+        })
+        
+        document.body.appendChild(maincontainer)
+        console.log(document);
+    </script>
+    
+</body>
+</html>
