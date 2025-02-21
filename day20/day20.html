@@ -21,6 +21,9 @@
     </style>
 </head>
 <body>
+
+
+  <h1><a href="cart.html">cart</a></h1>
     <h1>
         <a href="file.html">file open</a>
     </h1>
@@ -47,6 +50,8 @@
         console.log(name);
         
         document.body.append(name)
+
+        let emparr=[]
 
         let data=[
   {
@@ -297,7 +302,7 @@ let container=document.createElement("div");
 let maindata=data.map((val)=>{
     let btn=document.createElement("button")
     btn.innerText="click me"
-    console.log(btn);
+    // console.log(btn);
     
 //   console.log(val.title)
 //   console.log(val.id)
@@ -318,7 +323,10 @@ childb.innerText=val.price
 childc.innerText=val.description
 
 btn.addEventListener("click", ()=>{
-    child.style.display="none"
+    // child.style.display="none"
+    emparr.push(val)
+    console.log(emparr)
+    localStorage.setItem("card", JSON.stringify(emparr))
 })
 
 child.append(img,childa,childb,childc,btn)
@@ -326,7 +334,7 @@ child.append(img,childa,childb,childc,btn)
 container.appendChild(child)
 })
 
-console.log(container)
+// console.log(container)
 document.body.append(container)
 
     </script>

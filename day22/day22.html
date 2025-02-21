@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- 
+
+    timing funcitons
+    1. setTimeout()
+    2. setInterval()
+    3. clearTimeout()
+    3. clearInterval()
+
+
+
+    
+    -->
+
+    <script>
+        /*
+        callbacks
+        is a function when a function definition is
+        passed to another func as an arugument
+
+        1) asynchrounous tasks
+        2) sequence order
+
+        
+        */ 
+
+        function one(callback){
+            setTimeout(() => {
+                console.log("learning html");
+                callback()
+            }, 1000);
+        }
+
+        function two(callback){
+            setTimeout(() => {
+                console.log("learning css");
+                callback()
+            }, 30000);
+        }
+
+        function three(callback){
+            setTimeout(() => {
+                console.log("learning js");
+                callback()
+            }, 1000);
+        }
+
+
+        one(()=>{
+            two(()=>{
+                three(()=>{
+                    console.log("done");
+                })
+            })
+        })
+
+        // function add(val,callback){
+        //     callback(val+10)
+        // }
+        
+        // function sub(val,callback){
+        //     callback(val-2)
+
+        // }
+
+        // function mul(val,callback){
+        //     callback(val*5)
+        // }
+
+        // function div(val,callback){
+        //     callback(val/2)
+        // }
+
+
+        // add(10,(addres)=>{
+        //     sub(addres,(subres)=>{
+        //         mul(subres,(mulres)=>{
+        //             div(mulres, (finalres)=>{
+        //              console.log(finalres)
+        //             })
+        //         })
+        //     })
+        // })
+
+        
+        
+
+        
+
+
+    </script>
+    
+</body>
+</html>
