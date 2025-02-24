@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        /*
+        synchronous and asynchrono
+        callstack - gec- lifo
+        web api -
+        callback que - micro(high priority - fifo - promise , asycn ) 
+        and macro  (timing functions)-- aynch code 
+
+        eventloop - monitoring the callstack and task que
+
+
+        callbacks- 
+        when a func def is passed to another fun as an argument
+
+        callback hell - deeply nested callbacks- pyramid of doom
+
+
+        how to mitigate callback hell
+        promises
+        it reprsents the eventual completion (or failure) or 
+        an asynch operation and its resulting value
+        
+
+        promise have three state
+        fullfilled state
+        rejected state
+        pending state
+
+        how to create a promise
+        let a=new Promise((res, rej)=>{
+
+        res()
+        rej()
+        })
+
+
+
+
+        how to consume a promise
+
+
+
+
+
+
+        
+        
+        */ 
+
+        let a=new Promise((res,rej)=>{
+            data=10;
+            if(data==10){
+                res("resolved");
+            }
+            else{
+                rej("rejected")
+            }
+        })
+
+
+
+
+        function addtocart(a){
+            console.log("products added to cart");
+            a()
+            
+        }
+
+        function payment(b){
+            setTimeout(() => {
+                
+                console.log("payment done");
+                b()
+            }, 3000);
+        }
+
+        function placed(){
+            console.log("order placed");
+        }
+
+        addtocart(()=>{
+          payment(()=>{
+            placed()
+          })
+        })
+    </script>
+    
+</body>
+</html>

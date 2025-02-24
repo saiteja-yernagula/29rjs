@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /*
+        callbacks-nested callbacks - pyramid of doom or callback hell
+        promises
+        it representes the evention completion(or failure) of
+        an async operation
+
+        three states
+        fullfilled - success - resolved
+        rejected - failure
+        pending
+
+        creating a promise
+        var a=new Promise((res,rej)=>{
+
+
+        })
+
+
+        consuming a promise
+        1) then catch
+        2) async await
+
+
+        promise chaining -- aync await
+
+
+
+        
+        
+        */
+
+        //creating a promise
+
+        // var a=new Promise((res,rej)=>{
+
+        //     data=10;
+        //     if(data==11){
+        //         res("it is resolved")
+        //     }else{
+        //         rej("it is rejected")
+        //     }
+
+        // })
+
+        //consuming a promise
+        // a
+        // .then((res)=>{
+        //     console.log(res)
+        // })
+        // .catch((err)=>{
+        //     console.log(err)
+        // })
+
+        
+
+
+        // function html(){
+        //     return new Promise((res)=>{
+        //         res("learning html")
+        //     })
+        // }
+
+        // function css(){
+        //     return new Promise((res)=>{
+        //         res("learning css")
+        //     })
+        // }
+
+
+        // function js(){
+        //     return new Promise((res)=>{
+        //         res("learning js")
+        //     })
+        // }
+
+
+        // html()
+        // .then((val)=>{
+        //     console.log(val)
+        //     return css()
+        // })
+        // .then((val)=>{
+        //     console.log(val)
+        //     return js()
+        // })
+        // .then((val)=>{
+        //     console.log(val)
+        // })
+
+        // async function hello(){
+        //     let a=await html()
+        //     console.log(a);
+        //     let b=await css()
+        //     console.log(b);
+        //     let c=await js()
+        //     console.log(c);
+    
+        // }
+        // hello()
+
+
+
+        // function sum(val){
+        //     return new Promise((res)=>{
+        //       res(val+10)
+        //     })
+            
+        // }
+
+        
+        // function sub(val){
+        //     return new Promise((res)=>{
+        //       res(val-2)
+        //     })
+            
+        // }
+
+        
+        // function mul(val){
+        //     return new Promise((res)=>{
+        //       res(val*5)
+        //     })
+            
+        // }
+
+        
+        // function div(val){
+        //     return new Promise((res)=>{
+        //       res(val/2)
+        //     })
+            
+        // }
+
+
+        // sum(10)
+        // .then((addres)=>sub(addres))
+        // .then((subres)=>mul(subres))
+        // .then((mulres)=>div(mulres))
+        // .then((divres)=>console.log(divres))
+
+        // async function hello(){
+        //     let addres=await sum(10)
+        //     let subres=await sub(addres)
+        //     let mulres=await mul(subres)
+        //     let divres=await div(mulres)
+        //     console.log(divres)
+        // }
+        // hello()
+
+
+      let a=new Promise((res)=>{
+
+        setTimeout(() => {
+            res("learning html")
+        }, 7000);
+
+      })
+
+      
+      let b=new Promise((res)=>{
+
+        setTimeout(() => {
+            res("learning css")
+        }, 6000);
+
+      })
+
+      
+      let c=new Promise((res)=>{
+
+setTimeout(() => {
+    res("learning js")
+}, 1000);
+
+})
+
+// async function helloo(){
+//     let html = await a
+//     console.log(html);
+    
+//     let css=await b
+//     console.log(css);
+
+//     let js=await c
+//     console.log(js);
+// }
+// helloo()
+
+
+Promise.all([a,b,c])
+.then((val)=>console.log(val))
+
+
+    </script>
+    
+</body>
+</html>
