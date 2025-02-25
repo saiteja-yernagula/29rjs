@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        to overcome callback hell
+
+        promises-resolve
+        then catch- promise chaining
+
+        async await
+
+
+        error handling methods in js
+        try 
+        catch
+        finally
+
+        
+        */ 
+
+        // console.log("first")
+
+        // try{
+        //     let a=10
+
+        //     if(a==10){
+        //         throw new Error("it is error")
+        //     }
+            
+        // }
+        // catch(err){
+        //     console.error(err)
+        // }
+        // finally{
+        //     console.log("common")
+        // }
+    
+        // console.log("third")
+
+    //   num=-19;
+    //     try {
+    //     if (num <= 0) {
+    //       throw new Error("The number must be positive.");
+    //     }
+    //   } catch (err) {
+    //     console.error(err);
+    //   }
+
+
+    //    fetch('https://storeapi.com/products/1')
+    //    .then((val)=>{
+    //      return val.json()
+
+    //    })
+    //    .then((data)=>{
+    //    return  console.log(data)
+
+    //    })
+    //    .catch((err)=>{
+    //     console.log("invalid request")
+    //    })
+
+
+       async function hello(){
+        try{
+
+            let a= await fetch("https://storeapi.com/products/1");
+            let b=await a.json();
+            console.log(b)
+        }
+        catch(err){
+            console.log("error")
+        }
+       }
+       hello()
+
+/*
+ then catch        async await -error handlig
+ try catch -error handling
+ types of errors
+ api - http codes
+ http methods - get post put delete patch
+ types of api - 
+ rest soap  grpc graphql websocketes
+ brwose, server , third party apis
+
+
+ firebase - login signup authentification
+ firebase clouddatabase- crud - create read update and deleter
+
+
+*/
+    //    1 - name,age
+    //    2 - name , age
+    //    3  - name , age        - city
+    //    4 - name,age
+    </script>
+    
+</body>
+</html>
