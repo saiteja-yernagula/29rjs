@@ -1,0 +1,31 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "john"
+    },
+    {
+      "city": "vizag",
+      "state": "andhra",
+      "id": 2
+    },
+    {
+      "id": 4,
+      "name": "Alice"
+    },
+    {
+      "id": 3,
+      "name": "jini",
+      "city": "vizag",
+      "state": "andhra"
+    },
+    {
+      "id": 5,
+      "name": "jessy"
+    },
+    {
+      "id": 6,
+      "name": "jessy"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="hello()">get data</button>
+    <button onclick="postdata()">post data</button>
+    <button onclick="putdata()">put data</button>
+    <button onclick="patchdata()">patch data</button>
+    <button onclick="deletedata()">deleyte data</button>
+
+
+    <script>
+        async function hello(){
+            let data= await fetch("http://localhost:3000/data");
+            let final=await data.json()
+            console.log(final)
+        }
+
+        let obj={
+            // id: 6,
+            name:"jessy"
+        }
+
+
+        async function postdata(){
+            let finaldata=await fetch(" http://localhost:3000/data",{
+                method:"POST",
+                headers:{
+                    "Content-Type": "application/json"
+                },
+                body:JSON.stringify(obj)
+            })
+        }
+
+        let newobj={
+            city:"vizag",
+            state:"andhra",
+            name:"jini"
+        }
+
+        async function putdata(){
+            let finaldata=await fetch(" http://localhost:3000/data/2",{
+                method:"PUT",
+                headers:{
+                    "Content-Type": "application/json"
+                },
+                body:JSON.stringify(newobj)
+            })
+        }
+
+
+        
+        async function patchdata(){
+            let finaldata=await fetch(" http://localhost:3000/data/3",{
+                method:"PATCH",
+                headers:{
+                    "Content-Type": "application/json"
+                },
+                body:JSON.stringify(newobj)
+            })
+        }
+
+
+        let del=8
+        async function deletedata(){
+            let deletedata=await fetch(`http://localhost:3000/data/${del}`, {
+                method: "DELETE"
+            })
+        }
+    </script>
+</body>
+</html>
