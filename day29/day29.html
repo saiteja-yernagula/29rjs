@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>content</h1>
+    <button id="btn">click me</button>
+    <script>
+
+        /*
+
+        this keyword
+        global - winodw
+        functions- window
+        object method- object
+        object method- arrow - window
+        button - button element
+        
+
+        how to manipulate this
+        call 
+        hello.call(obj, "a", "b")
+
+        apply
+        hello.apply(obj,["a", "b"])
+
+        bind
+        a=hello.bind(obj, "a", "b")
+        a()
+        
+        */ 
+    //    obj={
+    //     name:"john",
+    //     age:30
+    //    }
+
+    //     function hello(city, state){
+    //         console.log(this, city , state)
+    //     }
+
+    //     let a =hello.bind(obj, "vizag", "andhra")
+    //     a()
+    //     // hello.apply(obj, ["vizag", "andhra"])
+
+        // console.log(this)
+
+        // function hello(){
+        //     // this.document.body.style.fontSize="80px"
+            
+        //     console.log( this.document.body);
+            
+        // }
+        // hello()
+
+        // let obj={
+        //     studentname:"john",
+        //     hello:()=>{
+        //         console.log(this)
+        //     }
+        // }
+
+        // obj.hello()
+
+        // btn=document.getElementById("btn")
+        // btn.addEventListener("click", function(){
+        //     console.log(this)
+        //     this.style.color="red";
+        // })
+
+
+
+        /*
+        constructor function 
+        
+
+        function Person(a,b){
+            this.name=a
+            this.age=b
+        }
+        let obj=new Person("john", 25)
+        let obj2=new Person("jessy", 22)
+
+        console.log(obj)
+        console.log(obj2)
+
+
+        
+        */ 
+
+        /*
+        
+        oops - object oriented programming structure
+        it is way of writing a code in more modular
+        and re usable manner
+
+        class- it is a way to define a templatre for 
+        creating an object
+
+        class defines properties(state) and methods(behaviour)
+
+        class Classname{
+
+        }
+
+        obj syntax
+        let obj=new Classname()
+        let obj1=new Classname()
+
+        constructor- to initliaze the properties
+
+
+        */ 
+
+        // class Marker{
+        //     color;
+        //     type;
+        //     lid;
+        //     constructor(color,type,lid){
+        //         this.color=color;
+        //         this.type=type;
+        //         this.lid=lid;
+        //     }
+        //     write(){
+        //         console.log("writing with" , this.color , this.type);
+        //     }
+        // }
+        // let obj=new Marker("red","permanent","square");
+        // let obj1=new Marker("black","temp","circle");
+        // obj.write()
+        // obj1.write()
+
+    //    Marker.prototype.size="6cm"
+        // console.log(obj.size)
+        // console.log(obj1.size)
+        
+        /*
+        
+        privat fields - it is used to hide the properties
+        
+
+        getters
+        setters
+        */ 
+        // class Employee{
+        //     #name
+        //     #salary
+        //     #id
+        //     constructor(name, salary, id){
+        //         this.#name=name;
+        //         this.#salary=salary;
+        //         this.#id=id;
+        //     }
+
+        //     get salaryperson(){
+        //         return this.#salary
+        //     }
+        //     set sal(val){
+        //         this.#salary=val;
+        //     }
+        // }
+        // let person1=new Employee('uttej', 200000,1);
+        // let person2=new Employee('pawan', 100000,2);
+        // person2.sal=500000;
+        // console.log(person2.salaryperson);
+        
+        // // console.log(person1.salary)
+        // console.log(person1.details())
+        // console.log(person2.details())
+
+        /*
+        inheritance
+        it is acquiring the properties from
+        super class(base class) to sub class(derived class)
+
+        
+        
+        */ 
+       class Animal{
+        height;
+        weight;
+        constructor(height,weight){
+            this.height=height;
+            this.weight=weight;
+        }
+
+
+        details(){
+            return `height is ${this.height} and weight is ${this.weight}`;
+        }
+       }
+
+       class Dog extends Animal{
+        breed;
+        food;
+        behaviour;
+
+        constructor(breed,food,behaviour,height,weight){
+            super(height,weight)
+            this.breed=breed;
+            this.food=food;
+            this.behaviour=behaviour;
+        }
+
+        details(){
+            return `breed is ${this.breed} and food is ${this.food} and behaviour`
+        }
+        
+       }
+
+       let dog1=new Dog("lab", "chicken", "playful", 4 , 30);
+       console.log(dog1)
+
+       let dog2=new Dog("dogo", "protien food", "wild", 6, 50);
+       console.log(dog2)
+
+       console.log(dog1.details())
+       console.log(dog2.details())
+
+
+
+
+    </script>
+    
+</body>
+</html>
