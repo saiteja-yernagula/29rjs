@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    /*
+
+    oops- object oriented programming structure
+
+    class- blueprint or template for creating objects
+    state - properts and methods- behaviour
+
+    constructor- to initilaze the properties
+
+    encapsulation- private fields #name
+    get method and set method
+
+    inheritance
+    acquiring properties from super to sub class
+     super
+     class classname exter oldc
+
+     polymorphism
+
+     abstraction - hiding the implemention
+
+     prototype
+
+
+     es-6  - 2015 
+      
+     let and const
+     arrow function 
+     template literals- string interpolation- `${a}`
+     promises - represents the eventual
+      completion or failure of an async fucntion- to overcome callback hell
+
+      spread operator
+      1) spread operator is denoted with ...
+      rest operator
+      destructuring
+
+
+
+
+
+
+
+
+
+    
+    */ 
+
+
+   // let newarr=arr;
+   
+   // newarr[0]="html";
+   
+//    let arr=[1,2,3]
+   // console.log(arr)
+   // console.log(newarr)
+    // let a=["css", "js"]
+    // let newarr=[...arr, ...a];
+    // newarr[0]="html";
+    // console.log(newarr)
+    // console.log(arr)
+
+    // // strings
+
+    // let str="hello world";
+    // let newstr=[...str]
+    // console.log(newstr)
+
+    // let obj={
+    //     name:"john",
+    //     age:30
+    // }
+    // let newobj={...obj}
+    // newobj.age=25;
+    // console.log(obj)
+    // console.log(newobj)
+
+  
+    // function sum(b,...a){
+    //     console.log(a)
+    // }
+    // sum(1,2,3,4)
+
+    // destructuring
+    // let arr=[1,2,3,[4,5]]
+    // let [,,,[a,b]]=arr
+
+    // console.log(a)
+
+    // object destructuring
+
+    let obj={
+        name:"john",
+        age:30,
+        address:{
+            city:"hyd",
+            state:"telangana"
+
+        }
+    }
+
+    let {name,age,address:{city,state}}=obj;
+    console.log(state)
+
+
+
+
+
+    </script>
+</body>
+</html>
