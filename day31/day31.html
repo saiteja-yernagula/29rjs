@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #outer{
+            background: red;
+        }
+
+        #inner{
+            background: blue;
+        }
+   
+    </style>
+</head>
+<body>
+    <div id="outer">
+        outer
+        <button id="inner">inner</button>
+    </div>
+    
+
+
+    <script type="modules">
+        import {a,b,c} from "./demo.js"
+    </script>
+
+<script >
+
+    /*
+    
+    es-6
+    shallow copy and deep copy
+    spread operator
+    rest operator- parameters
+
+    destructuring - process of extracting value from array and object
+    assignig them to an variable
+
+
+    modules
+    exports- named exports and default export
+    imports- named imports and default import
+
+    set and maps
+  
+    
+    event bubbling and event capturing
+
+
+    Sets in JavaScript
+A Set is a collection of unique values. 
+This means that no value can occur more
+ than once in a set
+
+
+
+
+    */ 
+
+
+    // var data=new Set();
+    // data.add(1)
+    // data.add(1)
+    // data.add(2)
+    // data.add(3)
+    // data.add("html")
+    // data.add("html")
+    // data.delete("html")
+    // console.log(data.entries())
+
+    // data.forEach((val,ind,src)=>{
+    //     console.log(val,ind,src)
+
+    // })
+
+    // console.log(data.size)
+    // console.log(data.has(10))
+    // data.clear()
+    // console.log(data)
+
+
+
+    // var outer=document.getElementById("outer");
+    // outer.addEventListener("click", function(){
+    //     console.log("outer clicked");
+    // })
+
+    // var inner=document.getElementById("inner");
+    // inner.addEventListener("click", function(e){
+    //     e.stopPropagation()
+    //     console.log("inner clicked");
+    // })
+
+    var data =new Map();
+    data.set("name","John")
+    data.set(1,24)
+    data.set(true, "boolean")
+    console.log(data.keys())
+    console.log(data.values())
+    console.log(data.entries())
+
+    // data.forEach((val,ind)=>{
+    //     console.log(val,ind)
+    // })
+
+    // console.log(data.delete(1))
+    // data.clear()
+    // console.log(data.size)
+    
+
+  
+    </script>
+</body>
+</html>
